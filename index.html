@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نظام إدارة النفايات - Cap Environmental Solutions">
+    <meta name="author" content="Cap">
+    <title>لوحة التحكم - Cap</title>
+
+    <link rel="icon" href="assets/images/fv.ico" type="image/svg+xml">
+    <!-- Fonts - Cairo Font -->
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <!-- Bootstrap 5 -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-theme="dark">
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/Cap-logo.svg" alt="Cap Logo">
+            </div>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <img src="assets/images/SidemneuIcons/dashboard.svg" alt="Dashboard" class="nav-icon">
+                            <span>داشبورد</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vehicles.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/vehicles.svg" alt="Vehicles" class="nav-icon">
+                            <span>المركبات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="map.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/map.svg" alt="Map" class="nav-icon">
+                            <span>الخريطة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="analytics.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/chart.svg" alt="Analytics" class="nav-icon">
+                            <span>التحليلات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="driver-behavior.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/user-search.svg" alt="Driver Behavior" class="nav-icon">
+                            <span>سلوك السائقين</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/routing.svg" alt="Routes" class="nav-icon">
+                            <span>المسارات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="stock-market.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/coin.svg" alt="Stock Market" class="nav-icon">
+                            <span>البورصة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="complaints.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/message.svg" alt="Complaints" class="nav-icon">
+                            <span>الشكاوي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="alerts.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/notification-bing.svg" alt="Notifications" class="nav-icon">
+                            <span>التنبيهات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-separator">
+                        <span class="nav-separator-label">أخرى</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="application.html" class="nav-link">
+                            <i class="icon-phone1"></i>
+                            <span>التطبيق</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-actions">
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="اختر التاريخ">
+                        <i class="icon-calendar_today"></i>
+                        <span>أكتوبر 2025</span>
+                    </button>
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="تحديث تلقائي">
+                        <img src="assets/images/SidemneuIcons/refresh-square-2.svg" alt="تحديث تلقائي" class="action-icon" loading="lazy">
+                        <span>تحديث تلقائي</span>
+                    </button>
+              
+
+                    <div class="theme-toggle" role="group" aria-label="تبديل الوضع">
+                        <div class="theme-btn active" id="dark-theme" role="button" aria-label="الوضع الداكن" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/moon.svg" alt="الوضع الداكن" class="theme-icon" loading="lazy">
+                        </div>
+                        <div class="theme-btn" id="light-theme" role="button" aria-label="الوضع الفاتح" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/sun.svg" alt="الوضع الفاتح" class="theme-icon" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <i class="icon-search" aria-hidden="true"></i>
+                    <input type="text" class="form-control" placeholder="بحث..." aria-label="البحث">
+                </div>
+            </header>
+
+            <!-- KPI Grid -->
+            <section class="dashboard-grid">
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="kpi-4"></div>
+
+                    <div class="kpi-info">
+                        <h3>إجمالي النفايات</h3>
+                        <div class="kpi-value">11,686 طن</div>
+                        <div class="kpi-trend up">
+                            <i class="icon-keyboard_arrow_up"></i>
+                            <span>10% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="kpi-3"></div>
+                    <div class="kpi-info">
+                        <h3>النفايات المعاد تدويرها</h3>
+                        <div class="kpi-value">6,8906 طن</div>
+                        <div class="kpi-trend up">
+                            <i class="icon-keyboard_arrow_up"></i>
+                            <span>10% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="kpi-2"></div>
+                    <div class="kpi-info">
+                        <h3>نسبة إعادة التدوير</h3>
+                        <div class="kpi-value">59%</div>
+                        <div class="kpi-trend up">
+                            <i class="icon-keyboard_arrow_up"></i>
+                            <span>10% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="kpi-1"></div>
+                    <div class="kpi-info">
+                        <h3>عدد المواقع النشطة</h3>
+                        <div class="kpi-value">47 موقع</div>
+                        <div class="kpi-trend up">
+                            <i class="icon-keyboard_arrow_up"></i>
+                            <span>10% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Charts -->
+            <section class="charts-grid">
+                <div class="chart-card">
+                    <div class="waste-chart-container">
+                        <div id="wasteDistributionChart"></div>
+                        <div class="radial-center-content">
+                            <div class="radial-center-icon">
+                                <i class="icon-chart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-title waste-chart-title">توزيع أنواع النفايات (طن)</div>
+                    <div class="waste-chart-summary">
+                        <div class="waste-chart-value">12,875</div>
+                        <div class="waste-chart-percentage">
+                            <i class="icon-keyboard_arrow_up"></i>
+                            <span>2% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                    <div class="waste-legend">
+                        <div class="waste-legend-item">
+                            <div class="legend-icon-wrapper legend-purple">
+                                <div class="legend-icon"></div>
+                            </div>
+                            <span>ورق وكرتون</span>
+                            <span>862</span>
+                        </div>
+                        <div class="waste-legend-item">
+                            <div class="legend-icon-wrapper legend-green">
+                                <div class="legend-icon"></div>
+                            </div>
+                            <span>معادن</span>
+                            <span>753</span>
+                        </div>
+                        <div class="waste-legend-item">
+                            <div class="legend-icon-wrapper legend-orange">
+                                <div class="legend-icon"></div>
+                            </div>
+                            <span>بلاستيك</span>
+                            <span>553</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="monthly-chart-header">
+                        <div class="monthly-chart-right">
+                            <div class="chart-title monthly-chart-title">الاتجاهات الشهرية للنفايات (طن)</div>
+                            <div class="monthly-chart-kpi">
+                                <div class="monthly-chart-value">240.8K</div>
+                                <div class="monthly-percentage-box up">24.6% <i class="icon-keyboard_arrow_up"></i></div>
+                        
+                            </div>
+                        </div>
+
+                        <div class="monthly-chart-left">
+                            <button class="date-range-btn" aria-label="اختر الفترة الزمنية">
+                                <i class="icon-calendar_today" aria-hidden="true"></i>
+                                <span>يناير 2024 - ديسمبر 2024</span>
+                                <i class="icon-keyboard_arrow_down" aria-hidden="true"></i>
+                            </button>
+                            <div class="monthly-chart-legend">
+                                <div class="monthly-legend-item">
+                                    <span class="legend-dot legend-blue"></span>
+                                    <span>العضوية</span>
+                                </div>
+                                <div class="monthly-legend-item">
+                                    <span class="legend-dot legend-purple"></span>
+                                    <span>المعاد تدويرها</span>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div id="monthlyTrendsChart"></div>
+                </div>
+           
+            </section>
+
+            <!-- Bottom Grid -->
+            <section class="charts-grid bottom-grid">
+                   <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">النشاطات الأخيرة</div>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon activity-icon-green">
+                                <i class="icon-directions_car"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-title">تسجيل مركبة جديدة</div>
+                                <div class="activity-time">منذ 5 دقائق</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon activity-icon-red">
+                                <i class="icon-warning"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-title">تنبيه سرعة زائدة</div>
+                                <div class="activity-time">منذ 15 دقيقة</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon activity-icon-green">
+                                <i class="icon-check_circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-title">اکتمال رحلة #1234</div>
+                                <div class="activity-time">منذ 30 دقيقة</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="daily-activity-header">
+                        <div class="chart-title">نشاط جمع النفايات على مدار اليوم</div>
+                        <div class="daily-activity-kpi">
+                            <div class="daily-percentage-box up">28.5% <i class="icon-keyboard_arrow_up"></i></div>
+                            <div class="daily-activity-value">144.6K</div>
+                        </div>
+                    </div>
+                    <div id="dailyActivityChart"></div>
+                </div>
+             
+            </section>
+
+            <footer class="main-footer">
+                © 2026 CAP environmental solutions | Powered by mangcoding
+            </footer>
+        </main>
+    </div>
+
+    <!-- ApexCharts -->
+    <script src="assets/apexcharts/apexcharts.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

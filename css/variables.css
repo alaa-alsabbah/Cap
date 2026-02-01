@@ -1,0 +1,84 @@
+:root {
+    /* Color Palette */
+    --bg-dark: #0b141a;
+    --bg-sidebar: rgba(0, 58, 72, 0.58);
+    --bg-card: linear-gradient(180deg, rgba(0, 58, 72, 0.52) 0%, rgba(7, 43, 51, 0.52) 100%);
+    --bg-card-hover: rgba(255, 255, 255, 0.05);
+
+    --primary: #00897b;
+    --primary-light: #4db6ac;
+    --secondary: #00d2ff;
+    --accent-purple: #9c27b0;
+    --accent-orange: #ff9800;
+    --accent-green: rgba(43, 177, 114, 0.63);
+    --accent-red: #f44336;
+
+    --text-primary: #ffffff;
+    --text-secondary: #b0bec5;
+    --text-muted: #78909c;
+
+    --border: rgba(255, 255, 255, 0.1);
+    --border-bright: rgba(255, 255, 255, 0.2);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #00897b 0%, #00d2ff 100%);
+    --gradient-purple: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+    --gradient-orange: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+
+    /* Dark mode white overlays */
+    --white-overlay-21: rgba(255, 255, 255, 0.21);
+    --white-overlay-17: rgba(255, 255, 255, 0.17);
+    --white-overlay-10: rgba(255, 255, 255, 0.1);
+    --white-overlay-5: rgba(255, 255, 255, 0.05);
+    --white-overlay-3: rgba(255, 255, 255, 0.03);
+    --white-overlay-0: rgba(255, 255, 255, 0);
+    
+    /* Text colors on colored backgrounds */
+    --text-on-gradient: #ffffff;
+    --text-on-accent: #ffffff;
+    
+    /* Progress bar background */
+    --progress-bg: rgba(255, 255, 255, 0.1);
+
+    /* Spacing & Sizes */
+    --sidebar-width: 260px;
+    --header-height: 70px;
+    --border-radius-lg: 20px;
+    --border-radius-md: 12px;
+    --border-radius-sm: 8px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+
+    /* Shadow */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] {
+    --bg-dark: #f0f2f5;
+    --bg-sidebar: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f8f9fa;
+    --text-primary: #1a1a1a;
+    --text-secondary: #606770;
+    --text-muted: #8d949e;
+    --border: rgba(0, 0, 0, 0.1);
+    --border-bright: rgba(0, 0, 0, 0.15);
+    
+    /* Override rgba(255, 255, 255, ...) for light mode */
+    --white-overlay-21: rgba(0, 0, 0, 0.05);
+    --white-overlay-17: rgba(0, 0, 0, 0.04);
+    --white-overlay-10: rgba(0, 0, 0, 0.08);
+    --white-overlay-5: rgba(0, 0, 0, 0.04);
+    --white-overlay-3: rgba(0, 0, 0, 0.02);
+    --white-overlay-0: transparent;
+    
+    /* Progress bar background for light mode */
+    --progress-bg: rgba(0, 0, 0, 0.1);
+    
+    /* Text colors on colored backgrounds (still white in light mode) */
+    --text-on-gradient: #ffffff;
+    --text-on-accent: #ffffff;
+}

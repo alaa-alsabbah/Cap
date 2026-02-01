@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صفحة التطبيق - Cap Environmental Solutions">
+    <meta name="author" content="Cap">
+    <title>التطبيق - Cap</title>
+    <link rel="icon" href="assets/images/fv.ico" type="image/svg+xml">
+    <!-- Fonts - Cairo Font -->
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <!-- Bootstrap 5 -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-theme="dark">
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/Cap-logo.svg" alt="Cap Logo">
+            </div>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/dashboard.svg" alt="Dashboard" class="nav-icon">
+                            <span>داشبورد</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vehicles.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/vehicles.svg" alt="Vehicles" class="nav-icon">
+                            <span>المركبات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/map.svg" alt="Map" class="nav-icon">
+                            <span>الخريطة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="analytics.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/chart.svg" alt="Analytics" class="nav-icon">
+                            <span>التحليلات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="driver-behavior.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/user-search.svg" alt="Driver Behavior" class="nav-icon">
+                            <span>سلوك السائقين</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/routing.svg" alt="Routes" class="nav-icon">
+                            <span>المسارات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="stock-market.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/coin.svg" alt="Stock Market" class="nav-icon">
+                            <span>البورصة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="complaints.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/message.svg" alt="Complaints" class="nav-icon">
+                            <span>الشكاوي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="alerts.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/notification-bing.svg" alt="Alerts" class="nav-icon">
+                            <span>التنبيهات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-separator">
+                        <span class="nav-separator-label">أخرى</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="application.html" class="nav-link active">
+                            <i class="icon-phone1"></i>
+                            <span>التطبيق</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-actions">
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="اختر التاريخ">
+                        <i class="icon-calendar_today"></i>
+                        <span>أكتوبر 2025</span>
+                    </button>
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="تحديث تلقائي">
+                        <img src="assets/images/SidemneuIcons/refresh-square-2.svg" alt="تحديث تلقائي" class="action-icon" loading="lazy">
+                        <span>تحديث تلقائي</span>
+                    </button>
+
+                    <div class="theme-toggle" role="group" aria-label="تبديل الوضع">
+                        <div class="theme-btn active" id="dark-theme" role="button" aria-label="الوضع الداكن" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/moon.svg" alt="الوضع الداكن" class="theme-icon" loading="lazy">
+                        </div>
+                        <div class="theme-btn" id="light-theme" role="button" aria-label="الوضع الفاتح" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/sun.svg" alt="الوضع الفاتح" class="theme-icon" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <i class="icon-search" aria-hidden="true"></i>
+                    <input type="text" class="form-control" placeholder="بحث..." aria-label="البحث">
+                </div>
+            </header>
+
+            <!-- Application Cards Section -->
+            <section class="application-cards-section" id="applicationCardsSection">
+                <div class="application-cards-grid">
+                    <!-- Operations Employee Card -->
+                    <div class="application-card">
+                        <h3 class="application-card-title">موظف التشغيل</h3>
+                        <div class="application-phone-mockup">
+                            <img src="assets/images/iphone-APP01.svg" alt="Operations Employee App" class="phone-image">
+                        </div>
+                        <button class="application-view-btn" data-role="operations">عرض</button>
+                    </div>
+
+                    <!-- Driver Card -->
+                    <div class="application-card">
+                        <h3 class="application-card-title">السائق</h3>
+                        <div class="application-phone-mockup">
+                            <img src="assets/images/iphone-APP02.svg" alt="Driver App" class="phone-image">
+                        </div>
+                        <button class="application-view-btn" data-role="driver">عرض</button>
+                    </div>
+
+                    <!-- Operations Manager Card -->
+                    <div class="application-card">
+                        <h3 class="application-card-title">مدير العمليات</h3>
+                        <div class="application-phone-mockup">
+                            <img src="assets/images/iphone-APP03.svg" alt="Operations Manager App" class="phone-image">
+                        </div>
+                        <button class="application-view-btn" data-role="manager">عرض</button>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="application-card">
+                        <h3 class="application-card-title">المنتج</h3>
+                        <div class="application-phone-mockup">
+                            <img src="assets/images/iphone-APP04.svg" alt="Product App" class="phone-image">
+                        </div>
+                        <button class="application-view-btn" data-role="product">عرض</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Application Detail Section -->
+            <section class="application-detail-section hidden" id="applicationDetailSection">
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="application-back-btn" id="applicationBackBtn">
+                        <i class="icon-arrow_back"></i>
+                        رجوع
+                    </button>
+                </div>
+            
+                <div class="application-detail-content">
+                    <div class="application-detail-info">
+                        <h1 class="application-detail-title" id="detailTitle">المنتج</h1>
+                        <p class="application-detail-description" id="detailDescription">
+                            نظام متكامل يغطي جميع جوانب عمليات إعادة التدوير من البداية إلى النهاية
+                        </p>
+                    </div>
+                    <div class="application-detail-phone">
+                        <img src="assets/images/iphone-APP04.svg" alt="Product App" class="detail-phone-image" id="detailPhoneImage">
+                    </div>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                © 2026 CAP environmental solutions | Powered by mangcoding
+            </footer>
+        </main>
+    </div>
+
+    <!-- ApexCharts -->
+    <script src="assets/apexcharts/apexcharts.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/application.js"></script>
+</body>
+
+</html>
