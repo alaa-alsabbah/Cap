@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صفحة البورصة - Cap Environmental Solutions">
+    <meta name="author" content="Cap">
+    <title>البورصة - Cap</title>
+    <link rel="icon" href="assets/images/fv.ico" type="image/svg+xml">
+    <!-- Fonts - Cairo Font -->
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <!-- Bootstrap 5 -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-theme="dark">
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/Cap-logo.svg" alt="Cap Logo">
+            </div>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/dashboard.svg" alt="Dashboard" class="nav-icon">
+                            <span>داشبورد</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vehicles.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/vehicles.svg" alt="Vehicles" class="nav-icon">
+                            <span>المركبات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/map.svg" alt="Map" class="nav-icon">
+                            <span>الخريطة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="analytics.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/chart.svg" alt="Analytics" class="nav-icon">
+                            <span>التحليلات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="driver-behavior.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/user-search.svg" alt="Driver Behavior" class="nav-icon">
+                            <span>سلوك السائقين</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/routing.svg" alt="Routes" class="nav-icon">
+                            <span>المسارات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="stock-market.html" class="nav-link active">
+                            <img src="assets/images/SidemneuIcons/coin.svg" alt="Stock Market" class="nav-icon">
+                            <span>البورصة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="complaints.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/message.svg" alt="Complaints" class="nav-icon">
+                            <span>الشكاوي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="alerts.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/notification-bing.svg" alt="Notifications" class="nav-icon">
+                            <span>التنبيهات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-separator">
+                        <span class="nav-separator-label">أخرى</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="application.html" class="nav-link">
+                            <i class="icon-phone1"></i>
+                            <span>التطبيق</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-actions">
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="اختر التاريخ">
+                        <i class="icon-calendar_today"></i>
+                        <span>أكتوبر 2025</span>
+                    </button>
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="تحديث تلقائي">
+                        <img src="assets/images/SidemneuIcons/refresh-square-2.svg" alt="تحديث تلقائي" class="action-icon" loading="lazy">
+                        <span>تحديث تلقائي</span>
+                    </button>
+
+                    <div class="theme-toggle" role="group" aria-label="تبديل الوضع">
+                        <div class="theme-btn active" id="dark-theme" role="button" aria-label="الوضع الداكن" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/moon.svg" alt="الوضع الداكن" class="theme-icon" loading="lazy">
+                        </div>
+                        <div class="theme-btn" id="light-theme" role="button" aria-label="الوضع الفاتح" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/sun.svg" alt="الوضع الفاتح" class="theme-icon" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <i class="icon-search" aria-hidden="true"></i>
+                    <input type="text" class="form-control" placeholder="بحث..." aria-label="البحث">
+                </div>
+            </header>
+
+            <!-- KPI Grid -->
+            <section class="dashboard-grid">
+                <div class="kpi-card stock-kpi-card justify-content-start">
+                    <div class="stock-kpi-icon">
+                        <i class="icon-speed"></i>
+                    </div>
+                    <div class="kpi-info">
+                        <h3>متوسط الأمان</h3>
+                        <div class="kpi-value">88%</div>
+                        <div class="kpi-trend up">
+                            <span>+5.2%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card stock-kpi-card justify-content-start">
+                    <div class="stock-kpi-icon">
+                        <i class="icon-warning"></i>
+                    </div>
+                    <div class="kpi-info">
+                        <h3>حوادث التجاوز</h3>
+                        <div class="kpi-value">27</div>
+                        <div class="kpi-trend">
+                            <span>هذا الأسبوع</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card stock-kpi-card justify-content-start">
+                    <div class="stock-kpi-icon">
+                        <i class="icon-clock"></i>
+                    </div>
+                    <div class="kpi-info">
+                        <h3>نسبة إعادة التدوير</h3>
+                        <div class="kpi-value">59%</div>
+                        <div class="kpi-trend">
+                            <span>من الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="kpi-card stock-kpi-card justify-content-start">
+                    <div class="stock-kpi-icon">
+                        <i class="icon-flash_on"></i>
+                    </div>
+                    <div class="kpi-info">
+                        <h3>كفاءة الوقود</h3>
+                        <div class="kpi-value">84%</div>
+                        <div class="kpi-trend up">
+                            <span>+2.8%</span>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+
+            <!-- Price Trend Chart Section -->
+            <section class="price-trend-section">
+                <div class="chart-card">
+                    <h2 class="chart-title">اتجاه السعر - بلاستيك PET</h2>
+                    <div id="price-trend-chart"></div>
+                    
+                    <!-- Price Metrics -->
+                    <div class="price-metrics-container">
+                        <div class="price-metric-row">
+                            <div class="price-metric-label">سعر الافتتاح</div>
+                            <div class="price-metric-value">820 ر.س</div>
+                        </div>
+                        <div class="price-metric-row">
+                            <div class="price-metric-label">أعلى سعر</div>
+                            <div class="price-metric-value">820 ر.س</div>
+                        </div>
+                        <div class="price-metric-row">
+                            <div class="price-metric-label">أدنى سعر</div>
+                            <div class="price-metric-value">820 ر.س</div>
+                        </div>
+                        <div class="price-metric-row">
+                            <div class="price-metric-label">التغيير</div>
+                            <div class="price-metric-value price-change-up">+30 (+3.7%)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recyclable Materials List Card -->
+                <div class="materials-list-card">
+                    <h2 class="materials-list-title">أسعار المواد القابلة لإعادة التدوير</h2>
+                    <div class="materials-list-scroll">
+                        <div class="material-item">
+                            <div class="material-info">
+                                <h3 class="material-name">بلاستيك PET</h3>
+                                <span class="material-volume">الحجم: 245 طن</span>
+                            </div>
+                            <div class="material-price-info">
+                                <div class="material-price">
+                                    <span class="price-value">850</span>
+                                    <span class="price-unit">رس/طن</span>
+                                </div>
+                                <div class="price-change-badge up">
+                                    <i class="icon-keyboard_arrow_up"></i>
+                                    <span>5.6%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-item">
+                            <div class="material-info">
+                                <h3 class="material-name">بلاستيك HDPE</h3>
+                                <span class="material-volume">الحجم: 189 طن</span>
+                            </div>
+                            <div class="material-price-info">
+                                <div class="material-price">
+                                    <span class="price-value">920</span>
+                                    <span class="price-unit">رس/طن</span>
+                                </div>
+                                <div class="price-change-badge up">
+                                    <i class="icon-keyboard_arrow_up"></i>
+                                    <span>3.4%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-item">
+                            <div class="material-info">
+                                <h3 class="material-name">ورق أبيض</h3>
+                                <span class="material-volume">الحجم: 320 طن</span>
+                            </div>
+                            <div class="material-price-info">
+                                <div class="material-price">
+                                    <span class="price-value">680</span>
+                                    <span class="price-unit">رس/طن</span>
+                                </div>
+                                <div class="price-change-badge down">
+                                    <i class="icon-keyboard_arrow_down"></i>
+                                    <span>2.2%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-item">
+                            <div class="material-info">
+                                <h3 class="material-name">كرتون</h3>
+                                <span class="material-volume">الحجم: 456 طن</span>
+                            </div>
+                            <div class="material-price-info">
+                                <div class="material-price">
+                                    <span class="price-value">450</span>
+                                    <span class="price-unit">رس/طن</span>
+                                </div>
+                                <div class="price-change-badge up">
+                                    <i class="icon-keyboard_arrow_up"></i>
+                                    <span>2.7%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-item">
+                            <div class="material-info">
+                                <h3 class="material-name">ألمنيوم</h3>
+                                <span class="material-volume">الحجم: 78 طن</span>
+                            </div>
+                            <div class="material-price-info">
+                                <div class="material-price">
+                                    <span class="price-value">3,200</span>
+                                    <span class="price-unit">رس/طن</span>
+                                </div>
+                                <div class="price-change-badge up">
+                                    <i class="icon-keyboard_arrow_up"></i>
+                                    <span>4.1%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-item">
+                            <div class="material-info">
+                                <h3 class="material-name">نحاس</h3>
+                                <span class="material-volume">الحجم: 45 طن</span>
+                            </div>
+                            <div class="material-price-info">
+                                <div class="material-price">
+                                    <span class="price-value">2,850</span>
+                                    <span class="price-unit">رس/طن</span>
+                                </div>
+                                <div class="price-change-badge up">
+                                    <i class="icon-keyboard_arrow_up"></i>
+                                    <span>1.8%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                © 2026 CAP environmental solutions | Powered by mangcoding
+            </footer>
+        </main>
+    </div>
+
+    <!-- ApexCharts -->
+    <script src="assets/apexcharts/apexcharts.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/stock-market.js"></script>
+</body>
+
+</html>

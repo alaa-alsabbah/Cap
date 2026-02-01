@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صفحة التحليلات - Cap Environmental Solutions">
+    <meta name="author" content="Cap">
+    <title>التحليلات - Cap</title>
+    <link rel="icon" href="assets/images/fv.ico" type="image/svg+xml">
+    <!-- Fonts - Cairo Font -->
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <!-- Bootstrap 5 -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-theme="dark">
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/Cap-logo.svg" alt="Cap Logo">
+            </div>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/dashboard.svg" alt="Dashboard" class="nav-icon">
+                            <span>داشبورد</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vehicles.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/vehicles.svg" alt="Vehicles" class="nav-icon">
+                            <span>المركبات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/map.svg" alt="Map" class="nav-icon">
+                            <span>الخريطة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="analytics.html" class="nav-link active">
+                            <img src="assets/images/SidemneuIcons/chart.svg" alt="Analytics" class="nav-icon">
+                            <span>التحليلات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="driver-behavior.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/user-search.svg" alt="Driver Behavior" class="nav-icon">
+                            <span>سلوك السائقين</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/routing.svg" alt="Routes" class="nav-icon">
+                            <span>المسارات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="stock-market.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/coin.svg" alt="Stock Market" class="nav-icon">
+                            <span>البورصة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="complaints.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/message.svg" alt="Complaints" class="nav-icon">
+                            <span>الشكاوي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="alerts.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/notification-bing.svg" alt="Notifications" class="nav-icon">
+                            <span>التنبيهات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-separator">
+                        <span class="nav-separator-label">أخرى</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="application.html" class="nav-link">
+                            <i class="icon-phone1"></i>
+                            <span>التطبيق</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-actions">
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="اختر التاريخ">
+                        <i class="icon-calendar_today"></i>
+                        <span>أكتوبر 2025</span>
+                    </button>
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="تحديث تلقائي">
+                        <img src="assets/images/SidemneuIcons/refresh-square-2.svg" alt="تحديث تلقائي" class="action-icon" loading="lazy">
+                        <span>تحديث تلقائي</span>
+                    </button>
+
+                    <div class="theme-toggle" role="group" aria-label="تبديل الوضع">
+                        <div class="theme-btn active" id="dark-theme" role="button" aria-label="الوضع الداكن" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/moon.svg" alt="الوضع الداكن" class="theme-icon" loading="lazy">
+                        </div>
+                        <div class="theme-btn" id="light-theme" role="button" aria-label="الوضع الفاتح" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/sun.svg" alt="الوضع الفاتح" class="theme-icon" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <i class="icon-search" aria-hidden="true"></i>
+                    <input type="text" class="form-control" placeholder="بحث..." aria-label="البحث">
+                </div>
+            </header>
+
+            <!-- KPI Grid -->
+            <section class="dashboard-grid">
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="analytics-kpi-1"></div>
+                    <div class="kpi-info">
+                        <h3>توفير محتمل</h3>
+                        <div class="kpi-value">18%</div>
+                        <div class="kpi-trend">
+                            <span>التشغيل بتحسين المسارات</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="analytics-kpi-2"></div>
+                    <div class="kpi-info">
+                        <h3>حاويات ستمتلئ قريباً</h3>
+                        <div class="kpi-value">4 حاويات</div>
+                        <div class="kpi-trend">
+                            <span>خلال الـ 7 أيام القادمة</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="analytics-kpi-3"></div>
+                    <div class="kpi-info">
+                        <h3>التوقع للشهر القادم</h3>
+                        <div class="kpi-value">12,100 طن</div>
+                        <div class="kpi-trend">
+                            <span>بنسبة 3.5% عن الشهر الحالي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="analytics-kpi-4"></div>
+                    <div class="kpi-info">
+                        <h3>التوفير البيئي المقدر</h3>
+                        <div class="kpi-value">CO2 2,340 طن</div>
+                        <div class="kpi-trend">
+                            <span>تم توفيرها من خلال إعادة التدوير</span>
+                        </div>
+                    </div>
+                </div>
+               
+            </section>
+
+            <!-- Analytics Chart -->
+            <section class="charts-grid">
+                <div class="chart-card analytics-full-chart">
+                    <div class="monthly-chart-header">
+                        <div class="monthly-chart-right">
+                            <div class="chart-title monthly-chart-title">التنبؤ بكميات النفايات</div>
+                        </div>
+
+                        <div class="monthly-chart-left">
+                            <button class="date-range-btn" aria-label="اختر الفترة الزمنية">
+                                <i class="icon-calendar_today" aria-hidden="true"></i>
+                                <span>يناير 2024 - ديسمبر 2024</span>
+                                <i class="icon-keyboard_arrow_down" aria-hidden="true"></i>
+                            </button>
+                            <div class="monthly-chart-legend">
+                                <div class="monthly-legend-item">
+                                    <span class="legend-dot legend-blue"></span>
+                                    <span>الحد الاعلى</span>
+                                </div>
+                                <div class="monthly-legend-item">
+                                    <span class="legend-dot legend-purple"></span>
+                                    <span>الحد الادنى</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="analyticsMonthlyTrendsChart"></div>
+                    
+                    <!-- Info Message Banner -->
+                    <div class="analytics-info-banner">
+                        <p class="analytics-info-text">يتوقع النظام زيادة في كميات النفايات خلال الأشهر القادمة. يُنصح بزيادة عدد عمليات الجمع أو إضافة مركبة جديدة.</p>
+                        <div class="analytics-info-icon">
+                            <div class="info-icon-circle">
+                                <i class="icon-swap_vert"></i>
+                                <span class="info-icon-number">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Container Fill Prediction Section -->
+            <section class="container-prediction-section">
+                    <div class="chart-card">
+                        <h2 class="chart-title pb-4">توقع امتلاء الحاويات</h2>
+                        <div class="container-prediction-grid">
+
+                            <div class="container-prediction-card">
+                                <h3 class="container-card-title">المنطقة الصناعية الشرقية</h3>
+                                <div class="container-chart-wrapper">
+                                    <div class="container-chart" id="container-chart-4"></div>
+                                    <div class="container-chart-content">
+                                        <div class="container-percentage">65%</div>
+                                        <div class="container-label">الامتلاء الحالي</div>
+                                    </div>
+                                </div>
+                                <div class="container-prediction-banner container-banner-teal">
+                                    من المتوقع أن تمتلئ بالكامل خلال 7 أيام
+                                </div>
+                            </div>
+
+                            <div class="container-prediction-card">
+                                <h3 class="container-card-title">السوق المركزي</h3>
+                                <div class="container-chart-wrapper">
+                                    <div class="container-chart" id="container-chart-3"></div>
+                                    <div class="container-chart-content">
+                                        <div class="container-percentage">85%</div>
+                                        <div class="container-label">الامتلاء الحالي</div>
+                                    </div>
+                                </div>
+                                <div class="container-prediction-banner container-banner-orange">
+                                    من المتوقع أن تمتلئ بالكامل خلال 3 أيام
+                                </div>
+                            </div>
+
+
+                            <div class="container-prediction-card">
+                                <h3 class="container-card-title">المنطقة السكنية الشمالية</h3>
+                                <div class="container-chart-wrapper">
+                                    <div class="container-chart" id="container-chart-2"></div>
+                                    <div class="container-chart-content">
+                                        <div class="container-percentage">92%</div>
+                                        <div class="container-label">الامتلاء الحالي</div>
+                                    </div>
+                                </div>
+                                <div class="container-prediction-banner container-banner-red">
+                                    من المتوقع أن تمتلئ بالكامل خلال 2 أيام
+                                </div>
+                            </div>
+
+                            <div class="container-prediction-card">
+                                <h3 class="container-card-title">الحي الجامعي</h3>
+                                <div class="container-chart-wrapper">
+                                    <div class="container-chart" id="container-chart-1"></div>
+                                    <div class="container-chart-content">
+                                        <div class="container-percentage">78%</div>
+                                        <div class="container-label">الامتلاء الحالي</div>
+                                    </div>
+                                </div>
+                                <div class="container-prediction-banner container-banner-orange">
+                                    من المتوقع أن تمتلئ بالكامل خلال 5 أيام
+                                </div>
+                            </div>
+                     
+                        </div>
+                    </div>
+            </section>
+
+            <!-- AI Insights and Maintenance Prediction Section -->
+            <section class="insights-maintenance-section">
+                <div class="chart-card">
+                        <!-- Maintenance Prediction (Right) -->
+                <div class="maintenance-prediction-section">
+                    <h2 class="chart-title pb-3">التنبؤ بالصيانة</h2>
+                    <div class="maintenance-prediction-cards">
+                        <div class="maintenance-kpi-card">
+                            <div class="maintenance-kpi-content-wrapper">
+
+                                <div class="maintenance-kpi-chart-wrapper">
+                                    <div class="maintenance-kpi-chart" id="maintenance-chart-1"></div>
+                                    <div class="maintenance-kpi-chart-content">
+                                        <div class="maintenance-kpi-value">12</div>
+                                        <div class="maintenance-kpi-label">خلال يوم</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="maintenance-kpi-text-content">
+                                    <h3 class="maintenance-kpi-title">نظام الفرامل</h3>
+                                    <div class="maintenance-kpi-percentage-large">85%</div>
+                                    <span class="maintenance-kpi-probability">احتمالية العطل</span>
+                                </div>
+                             
+                            </div>
+                        </div>
+
+                        <div class="maintenance-kpi-card">
+                            <div class="maintenance-kpi-content-wrapper">
+                                <div class="maintenance-kpi-chart-wrapper">
+                                    <div class="maintenance-kpi-chart" id="maintenance-chart-2"></div>
+                                    <div class="maintenance-kpi-chart-content">
+                                        <div class="maintenance-kpi-value">12</div>
+                                        <div class="maintenance-kpi-label">خلال يوم</div>
+                                    </div>
+                                </div>
+                                <div class="maintenance-kpi-text-content">
+                                    <h3 class="maintenance-kpi-title">البطارية 004-V</h3>
+                                    <div class="maintenance-kpi-percentage-large">85%</div>
+                                    <span class="maintenance-kpi-probability">احتمالية العطل</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="maintenance-recommendation-banner">
+                            <div class="maintenance-recommendation-icon">
+                                <i class="icon-build"></i>
+                            </div>
+                            <p class="maintenance-recommendation-text">يُنصح بجدولة صيانة وقائية للمركبة 002-V خلال الأسبوع القادم لتجنب الأعطال.</p>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            
+                <div class="chart-card">
+                    <!-- AI Insights (Left) -->
+                    <div class="ai-insights-section">
+                        <h2 class="chart-title pb-3">رؤى الذكاء الاصطناعي</h2>
+                        <div class="ai-insights-cards">
+                            <div class="ai-insight-card ai-insight-yellow">
+                                <div class="ai-insight-header">
+                                    <div class="ai-insight-icon ai-icon-yellow">
+                                        <i class="icon-warning"></i>
+                                    </div>
+                                    <h3 class="ai-insight-title">فرصة للتحسين</h3>
+
+                                </div>
+                                <p class="ai-insight-content">يمكن تقليل استهلاك الوقود بنسبة 12% من خلال تحسين مسارات الجمع في المنطقة الصناعية الشرقية. التوفير المتوقع: 45,000 ريال شهرياً.</p>
+                            </div>
+    
+                            <div class="ai-insight-card ai-insight-green">
+                                <div class="ai-insight-header">
+                                    <div class="ai-insight-icon ai-icon-green">
+                                        <i class="icon-trending_up"></i>
+                                    </div>
+                                    <h3 class="ai-insight-title">نمط موسمي محتمل</h3>
+                                </div>
+                                <p class="ai-insight-content">يتوقع النظام زيادة بنسبة 15% في النفايات العضوية خلال شهر رمضان. يُنصح بالتخطيط المسبق لزيادة القدرة الاستيعابية.</p>
+                            </div>
+    
+                            <div class="ai-insight-card ai-insight-blue">
+                                <div class="ai-insight-header">
+                                    <div class="ai-insight-icon ai-icon-blue">
+                                        <i class="icon-flash_on"></i>
+                                    </div>
+                                    <h3 class="ai-insight-title">توصية استراتيجية</h3>
+                                </div>
+                                <p class="ai-insight-content">بناءً على التحليلات، يُنصح بإضافة 3 نقاط جمع جديدة في المنطقة السكنية الجنوبية لتحسين التغطية وزيادة معدل إعادة التدوير بنسبة 8%.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="main-footer">
+                © 2026 CAP environmental solutions | Powered by mangcoding
+            </footer>
+        </main>
+    </div>
+
+    <!-- ApexCharts -->
+    <script src="assets/apexcharts/apexcharts.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صفحة المركبات - Cap Environmental Solutions">
+    <meta name="author" content="Cap">
+    <title>المركبات - Cap</title>
+    <link rel="icon" href="assets/images/fv.ico" type="image/svg+xml">
+    <!-- Fonts - Cairo Font -->
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <!-- Bootstrap 5 -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-theme="dark">
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/Cap-logo.svg" alt="Cap Logo">
+            </div>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/dashboard.svg" alt="Dashboard" class="nav-icon">
+                            <span>داشبورد</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vehicles.html" class="nav-link active">
+                            <img src="assets/images/SidemneuIcons/vehicles.svg" alt="Vehicles" class="nav-icon">
+                            <span>المركبات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="map.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/map.svg" alt="Map" class="nav-icon">
+                            <span>الخريطة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="analytics.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/chart.svg" alt="Analytics" class="nav-icon">
+                            <span>التحليلات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="driver-behavior.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/user-search.svg" alt="Driver Behavior" class="nav-icon">
+                            <span>سلوك السائقين</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/routing.svg" alt="Routes" class="nav-icon">
+                            <span>المسارات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="stock-market.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/coin.svg" alt="Stock Market" class="nav-icon">
+                            <span>البورصة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="complaints.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/message.svg" alt="Complaints" class="nav-icon">
+                            <span>الشكاوي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="alerts.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/notification-bing.svg" alt="Notifications" class="nav-icon">
+                            <span>التنبيهات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-separator">
+                        <span class="nav-separator-label">أخرى</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="application.html" class="nav-link">
+                            <i class="icon-phone1"></i>
+                            <span>التطبيق</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-actions">
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="اختر التاريخ">
+                        <i class="icon-calendar_today"></i>
+                        <span>أكتوبر 2025</span>
+                    </button>
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="تحديث تلقائي">
+                        <img src="assets/images/SidemneuIcons/refresh-square-2.svg" alt="تحديث تلقائي" class="action-icon" loading="lazy">
+                        <span>تحديث تلقائي</span>
+                    </button>
+
+                    <div class="theme-toggle" role="group" aria-label="تبديل الوضع">
+                        <div class="theme-btn active" id="dark-theme" role="button" aria-label="الوضع الداكن" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/moon.svg" alt="الوضع الداكن" class="theme-icon" loading="lazy">
+                        </div>
+                        <div class="theme-btn" id="light-theme" role="button" aria-label="الوضع الفاتح" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/sun.svg" alt="الوضع الفاتح" class="theme-icon" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <i class="icon-search" aria-hidden="true"></i>
+                    <input type="text" class="form-control" placeholder="بحث..." aria-label="البحث">
+                </div>
+            </header>
+
+            <!-- KPI Grid -->
+            <section class="dashboard-grid">
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="vehicles-kpi-4"></div>
+                    <div class="kpi-info">
+                        <h3>المسافة المقطوعة</h3>
+                        <div class="kpi-value">342 كم</div>
+                        <div class="kpi-trend">
+                            <span>اليوم</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="vehicles-kpi-3"></div>
+                    <div class="kpi-info">
+                        <h3>متوسط الحمولة</h3>
+                        <div class="kpi-value">63%</div>
+                        <div class="kpi-trend">
+                            <span>للمركبات النشطة</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="vehicles-kpi-2"></div>
+                    <div class="kpi-info">
+                        <h3>عمليات الجمع اليوم</h3>
+                        <div class="kpi-value">62</div>
+                        <div class="kpi-trend up">
+                            <i class="icon-keyboard_arrow_up"></i>
+                            <span>10% من الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-chart" id="vehicles-kpi-1"></div>
+                    <div class="kpi-info">
+                        <h3>المركبات النشطة</h3>
+                        <div class="kpi-value">4</div>
+                        <div class="kpi-trend">
+                            <span>من أصل 6 مركبات</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vehicles List Header -->
+            <section class="vehicles-header">
+                <button class="vehicles-filter-btn action-btn btn btn-outline-secondary d-flex align-items-center gap-2">
+                    <span>جميع المركبات</span>
+                    <i class="icon-keyboard_arrow_down"></i>
+                </button>
+            </section>
+
+            <!-- Vehicles Grid -->
+            <section class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-card-header">
+                        <div class="vehicle-icon-wrapper">
+                            <i class="icon-local_shipping"></i>
+                        </div>
+                        <div class="vehicle-info">
+                            <h3 class="vehicle-name">Toyota Corolla</h3>
+                            <span class="vehicle-number">رقم JPT12_1</span>
+                        </div>
+                        <div class="vehicle-header-right">
+                            <span class="vehicle-status active">نشط</span>
+                        </div>
+                    </div>
+                    
+                    <div class="vehicle-metrics">
+                        <div class="vehicle-metric">
+                            <div class="metric-header">
+                                <span class="metric-label">
+                                    <i class="icon-speed"></i>
+                                    السرعة
+                                </span>
+                                <span class="metric-value">km/h 65</span>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-bar progress-blue" data-value="65"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="vehicle-metric">
+                            <div class="metric-header">
+                                <span class="metric-label">
+                                    <i class="icon-local_gas_station"></i>
+                                    استهلاك الوقود
+                                </span>
+                                <span class="metric-value">72%</span>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-bar progress-purple" data-value="72"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="vehicle-metric">
+                            <div class="metric-header">
+                                <span class="metric-label">
+                                    <i class="icon-flash_on"></i>
+                                    الأداء اليومي
+                                </span>
+                                <span class="metric-value">85%</span>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-bar progress-green" data-value="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vehicle-card-footer">
+                        <button class="view-location-btn">
+                            <i class="icon-location_on"></i>
+                            <span>عرض الموقع</span>
+                        </button>
+                        <span class="vehicle-load">450 طن منقولة</span>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-card-header">
+                        <div class="vehicle-icon-wrapper">
+                            <i class="icon-local_shipping"></i>
+                        </div>
+                        <div class="vehicle-info">
+                            <h3 class="vehicle-name">Toyota Corolla</h3>
+                            <span class="vehicle-number">رقم JPT12_1</span>
+                        </div>
+                        <div class="vehicle-header-right">
+                            <span class="vehicle-status active">نشط</span>
+                        </div>
+                    </div>
+                    
+                    <div class="vehicle-metrics">
+                        <div class="vehicle-metric">
+                            <div class="metric-header">
+                                <span class="metric-label">
+                                    <i class="icon-speed"></i>
+                                    السرعة
+                                </span>
+                                <span class="metric-value">km/h 65</span>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-bar progress-blue" data-value="65"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="vehicle-metric">
+                            <div class="metric-header">
+                                <span class="metric-label">
+                                    <i class="icon-local_gas_station"></i>
+                                    استهلاك الوقود
+                                </span>
+                                <span class="metric-value">72%</span>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-bar progress-purple" data-value="72"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="vehicle-metric">
+                            <div class="metric-header">
+                                <span class="metric-label">
+                                    <i class="icon-flash_on"></i>
+                                    الأداء اليومي
+                                </span>
+                                <span class="metric-value">85%</span>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-bar progress-green" data-value="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vehicle-card-footer">
+                        <button class="view-location-btn">
+                            <i class="icon-location_on"></i>
+                            <span>عرض الموقع</span>
+                        </button>
+                        <span class="vehicle-load">450 طن منقولة</span>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-card-header">
+                        <div class="vehicle-icon-wrapper">
+                            <i class="icon-local_shipping"></i>
+                        </div>
+                        <div class="vehicle-info">
+                            <h3 class="vehicle-name">Toyota Corolla</h3>
+                            <span class="vehicle-number">رقم JPT12_1</span>
+                        </div>
+                        <div class="vehicle-header-right">
+                            <span class="vehicle-status active">نشط</span>
+                        </div>
+                    </div>
+                    
+                    <div class="vehicle-metrics">
+                        <div class="vehicle-metric">
+                            <div class="metric-header">
+                                <span class="metric-label">
+                                    <i class="icon-speed"></i>
+                                    السرعة
+                                </span>
+                                <span class="metric-value">km/h 65</span>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-bar progress-blue" data-value="65"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="vehicle-metric">
+                            <div class="metric-header">
+                                <span class="metric-label">
+                                    <i class="icon-local_gas_station"></i>
+                                    استهلاك الوقود
+                                </span>
+                                <span class="metric-value">72%</span>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-bar progress-purple" data-value="72"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="vehicle-metric">
+                            <div class="metric-header">
+                                <span class="metric-label">
+                                    <i class="icon-flash_on"></i>
+                                    الأداء اليومي
+                                </span>
+                                <span class="metric-value">85%</span>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-bar progress-green" data-value="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vehicle-card-footer">
+                        <button class="view-location-btn">
+                            <i class="icon-location_on"></i>
+                            <span>عرض الموقع</span>
+                        </button>
+                        <span class="vehicle-load">450 طن منقولة</span>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                © 2026 CAP environmental solutions | Powered by mangcoding
+            </footer>
+        </main>
+    </div>
+
+    <!-- ApexCharts -->
+    <script src="assets/apexcharts/apexcharts.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vehicles.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صفحة الخريطة - Cap Environmental Solutions">
+    <meta name="author" content="Cap">
+    <title>الخريطة - Cap</title>
+    <link rel="icon" href="assets/images/fv.ico" type="image/svg+xml">
+    <!-- Fonts - Cairo Font -->
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <!-- Bootstrap 5 -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-theme="dark">
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/Cap-logo.svg" alt="Cap Logo">
+            </div>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/dashboard.svg" alt="Dashboard" class="nav-icon">
+                            <span>داشبورد</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vehicles.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/vehicles.svg" alt="Vehicles" class="nav-icon">
+                            <span>المركبات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="map.html" class="nav-link active">
+                            <img src="assets/images/SidemneuIcons/map.svg" alt="Map" class="nav-icon">
+                            <span>الخريطة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="analytics.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/chart.svg" alt="Analytics" class="nav-icon">
+                            <span>التحليلات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="driver-behavior.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/user-search.svg" alt="Driver Behavior" class="nav-icon">
+                            <span>سلوك السائقين</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="routes.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/routing.svg" alt="Routes" class="nav-icon">
+                            <span>المسارات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="stock-market.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/coin.svg" alt="Stock Market" class="nav-icon">
+                            <span>البورصة</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="complaints.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/message.svg" alt="Complaints" class="nav-icon">
+                            <span>الشكاوي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="alerts.html" class="nav-link">
+                            <img src="assets/images/SidemneuIcons/notification-bing.svg" alt="Alerts" class="nav-icon">
+                            <span>التنبيهات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-separator">
+                        <span class="nav-separator-label">أخرى</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="application.html" class="nav-link">
+                            <i class="icon-phone1"></i>
+                            <span>التطبيق</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-actions">
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="اختر التاريخ">
+                        <i class="icon-calendar_today"></i>
+                        <span>أكتوبر 2025</span>
+                    </button>
+                    <button class="btn btn-outline-secondary action-btn d-flex align-items-center gap-2" aria-label="تحديث تلقائي">
+                        <img src="assets/images/SidemneuIcons/refresh-square-2.svg" alt="تحديث تلقائي" class="action-icon" loading="lazy">
+                        <span>تحديث تلقائي</span>
+                    </button>
+
+                    <div class="theme-toggle" role="group" aria-label="تبديل الوضع">
+                        <div class="theme-btn active" id="dark-theme" role="button" aria-label="الوضع الداكن" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/moon.svg" alt="الوضع الداكن" class="theme-icon" loading="lazy">
+                        </div>
+                        <div class="theme-btn" id="light-theme" role="button" aria-label="الوضع الفاتح" tabindex="0">
+                            <img src="assets/images/SidemneuIcons/sun.svg" alt="الوضع الفاتح" class="theme-icon" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <i class="icon-search" aria-hidden="true"></i>
+                    <input type="text" class="form-control" placeholder="بحث..." aria-label="البحث">
+                </div>
+            </header>
+
+            <!-- Map Dashboard Grid -->
+            <section class="map-dashboard-grid">
+                <!-- Map KPI Cards -->
+                <div class="map-kpi-card">
+                    <div class="map-kpi-icon">
+                        <i class="icon-flash_on"></i>
+                    </div>
+                    <div class="map-kpi-info">
+                        <h3>الطاقة المستعادة</h3>
+                        <div class="map-kpi-value">18,500 MWh</div>
+                        <div class="map-kpi-description">من محطات معالجة النفايات</div>
+                    </div>
+                </div>
+
+                <div class="map-kpi-card">
+                    <div class="map-kpi-icon">
+                        <i class="icon-local_florist"></i>
+                    </div>
+                    <div class="map-kpi-info">
+                        <h3>السماد العضوي المنتج</h3>
+                        <div class="map-kpi-value">3,421 طن</div>
+                        <div class="map-kpi-description">من النهايات العضوية هذا الشهر</div>
+                    </div>
+                </div>
+
+                <div class="map-kpi-card">
+                    <div class="map-kpi-icon">
+                        <i class="icon-loop"></i>
+                    </div>
+                    <div class="map-kpi-info">
+                        <h3>مراكز إعادة التدوير</h3>
+                        <div class="map-kpi-value">8</div>
+                        <div class="map-kpi-description">جميعها تعمل بكامل الطاقة</div>
+                    </div>
+                </div>
+
+                <div class="map-kpi-card">
+                    <div class="map-kpi-icon">
+                        <i class="icon-location_on"></i>
+                    </div>
+                    <div class="map-kpi-info">
+                        <h3>نقاط الجمع النشطة</h3>
+                        <div class="map-kpi-value">47</div>
+                        <div class="map-kpi-description">4 نقاط جديدة هذا الأسبوع</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Map Section -->
+            <section class="map-section">
+                <!-- Map Details Panel -->
+                <div class="map-details-panel">
+                    <div class="map-details-header">
+                        <h3 class="map-details-title">التفاصيل</h3>
+                    </div>
+                    <div class="map-details-content">
+                        <div class="map-detail-row">
+                            <div class="map-detail-item map-detail-subcard">
+                                <div class="map-detail-label">الإحداثيات</div>
+                                <div class="map-detail-value">
+                                    <span>70.0, 30.0</span>
+                                    <div class="map-detail-icon">
+                                        <i class="icon-location_pin"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map-detail-item map-detail-subcard">
+                                <div class="map-detail-label">الاسم</div>
+                                <div class="map-detail-value">
+                                    <span>نقطة جمع 2</span>
+                                    <div class="map-detail-icon">
+                                        <i class="icon-location_on"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-detail-progress-section">
+                            <div class="map-detail-progress-value">95%</div>
+                            <div class="map-detail-progress">
+                                <div class="map-detail-progress-bar">
+                                    <div class="map-detail-progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="map-detail-progress-label">مكتملة</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container-wrapper">
+                    <div id="map" class="map-container"></div>
+                    <div class="map-legend">
+                        <div class="map-legend-title">العناصر</div>
+                        <div class="map-legend-item">
+                            <span class="legend-icon legend-green-truck">🚛</span>
+                            <span class="legend-text">مركبة نشطة</span>
+                        </div>
+                        <div class="map-legend-item">
+                            <span class="legend-icon legend-orange-truck">🚛</span>
+                            <span class="legend-text">مركبة في الانتظار</span>
+                        </div>
+                        <div class="map-legend-item">
+                            <span class="legend-icon legend-blue-pin">📍</span>
+                            <span class="legend-text">نقطة جمع</span>
+                        </div>
+                        <div class="map-legend-item">
+                            <span class="legend-icon legend-green-recycle">♻️</span>
+                            <span class="legend-text">مركز إعادة تدوير</span>
+                        </div>
+                        <div class="map-legend-item">
+                            <span class="legend-icon legend-red-alert">⚠️</span>
+                            <span class="legend-text">تنبيه</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                © 2025 CAP environmental solutions | Powered by mangcoding
+            </footer>
+        </main>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- ApexCharts -->
+    <script src="assets/apexcharts/apexcharts.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+</body>
+
+</html>
